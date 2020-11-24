@@ -80,6 +80,12 @@
 		168D38B01DB9D0AF00087970 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 944A335C1A475A9C00BF8675 /* lvm.c */; };
 		168D38B11DB9D0AF00087970 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 944A335E1A475A9C00BF8675 /* lzio.c */; };
 		16C450D71DBA11FA00B3F06C /* LuaSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168D386D1DB9D00A00087970 /* LuaSource.framework */; };
+		83A9069B256D55EB00683C5A /* lua.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 83A9069A256D55EB00683C5A /* lua.hpp */; };
+		83A9069C256D55EB00683C5A /* lua.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 83A9069A256D55EB00683C5A /* lua.hpp */; };
+		83A9069D256D55EB00683C5A /* lua.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 83A9069A256D55EB00683C5A /* lua.hpp */; };
+		83A906A3256D55F700683C5A /* ljumptab.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A906A2256D55F700683C5A /* ljumptab.h */; };
+		83A906A4256D55F700683C5A /* ljumptab.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A906A2256D55F700683C5A /* ljumptab.h */; };
+		83A906A5256D55F700683C5A /* ljumptab.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A906A2256D55F700683C5A /* ljumptab.h */; };
 		941314AC1A5A123C00079EE5 /* ExtraTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941314AB1A5A123C00079EE5 /* ExtraTypes.swift */; };
 		944A33051A475A6400BF8675 /* LuaSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 944A33041A475A6400BF8675 /* LuaSource.h */; };
 		944A33071A475A6400BF8675 /* LuaSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 944A33061A475A6400BF8675 /* LuaSource.m */; };
@@ -178,6 +184,8 @@
 		1680CA581DBA0D3700333F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		168D386D1DB9D00A00087970 /* LuaSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LuaSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		168D38701DB9D00A00087970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A9069A256D55EB00683C5A /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
+		83A906A2256D55F700683C5A /* ljumptab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ljumptab.h; sourceTree = "<group>"; };
 		941314AB1A5A123C00079EE5 /* ExtraTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraTypes.swift; sourceTree = "<group>"; };
 		944A33011A475A6400BF8675 /* libLua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libLua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		944A33041A475A6400BF8675 /* LuaSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuaSource.h; sourceTree = "<group>"; };
@@ -335,6 +343,9 @@
 			children = (
 				944A33041A475A6400BF8675 /* LuaSource.h */,
 				944A33061A475A6400BF8675 /* LuaSource.m */,
+				944A33551A475A9C00BF8675 /* lua.h */,
+				83A9069A256D55EB00683C5A /* lua.hpp */,
+				83A906A2256D55F700683C5A /* ljumptab.h */,
 				168D38701DB9D00A00087970 /* Info.plist */,
 				944A33251A475A9C00BF8675 /* lapi.c */,
 				944A33261A475A9C00BF8675 /* lapi.h */,
@@ -384,7 +395,6 @@
 				944A33521A475A9C00BF8675 /* ltablib.c */,
 				944A33531A475A9C00BF8675 /* ltm.c */,
 				944A33541A475A9C00BF8675 /* ltm.h */,
-				944A33551A475A9C00BF8675 /* lua.h */,
 				944A33571A475A9C00BF8675 /* luaconf.h */,
 				944A33581A475A9C00BF8675 /* lualib.h */,
 				944A33591A475A9C00BF8675 /* lundump.c */,
@@ -422,7 +432,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A906A4256D55F700683C5A /* ljumptab.h in Headers */,
 				1680CA591DBA0D3700333F1F /* Lua.h in Headers */,
+				83A9069C256D55EB00683C5A /* lua.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +457,7 @@
 				168D38821DB9D0A200087970 /* lobject.h in Headers */,
 				168D38861DB9D0A200087970 /* lstate.h in Headers */,
 				168D38781DB9D0A200087970 /* lauxlib.h in Headers */,
+				83A906A3256D55F700683C5A /* ljumptab.h in Headers */,
 				168D388A1DB9D0A200087970 /* lua.h in Headers */,
 				168D38851DB9D0A200087970 /* lprefix.h in Headers */,
 				168D387D1DB9D0A200087970 /* lfunc.h in Headers */,
@@ -454,6 +467,7 @@
 				168D387C1DB9D0A200087970 /* ldo.h in Headers */,
 				168D38811DB9D0A200087970 /* lmem.h in Headers */,
 				168D38831DB9D0A200087970 /* lopcodes.h in Headers */,
+				83A9069B256D55EB00683C5A /* lua.hpp in Headers */,
 				168D388E1DB9D0A200087970 /* lundump.h in Headers */,
 				168D38881DB9D0A200087970 /* ltable.h in Headers */,
 			);
@@ -478,6 +492,7 @@
 				944A337F1A475A9C00BF8675 /* lobject.h in Headers */,
 				944A33871A475A9C00BF8675 /* lstate.h in Headers */,
 				944A33631A475A9C00BF8675 /* lauxlib.h in Headers */,
+				83A906A5256D55F700683C5A /* ljumptab.h in Headers */,
 				944A33901A475A9C00BF8675 /* lua.h in Headers */,
 				944A33851A475A9C00BF8675 /* lprefix.h in Headers */,
 				944A33721A475A9C00BF8675 /* lfunc.h in Headers */,
@@ -487,6 +502,7 @@
 				944A336F1A475A9C00BF8675 /* ldo.h in Headers */,
 				944A337C1A475A9C00BF8675 /* lmem.h in Headers */,
 				944A33811A475A9C00BF8675 /* lopcodes.h in Headers */,
+				83A9069D256D55EB00683C5A /* lua.hpp in Headers */,
 				944A33951A475A9C00BF8675 /* lundump.h in Headers */,
 				944A338C1A475A9C00BF8675 /* ltable.h in Headers */,
 			);
@@ -575,12 +591,12 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Motileware;
 				TargetAttributes = {
 					1680CA541DBA0D3600333F1F = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Automatic;
 					};
 					168D386C1DB9D00A00087970 = {
@@ -593,7 +609,7 @@
 					};
 					94697A8D1AC712CB0047447A = {
 						CreatedOnToolsVersion = 6.2;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -706,51 +722,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				944A33971A475A9C00BF8675 /* lvm.c in Sources */,
+				944A33621A475A9C00BF8675 /* lauxlib.c in Sources */,
+				944A337D1A475A9C00BF8675 /* loadlib.c in Sources */,
+				944A33601A475A9C00BF8675 /* lapi.c in Sources */,
+				944A33641A475A9C00BF8675 /* lbaselib.c in Sources */,
+				944A33651A475A9C00BF8675 /* lbitlib.c in Sources */,
+				944A336B1A475A9C00BF8675 /* ldblib.c in Sources */,
+				944A33661A475A9C00BF8675 /* lcode.c in Sources */,
+				944A33681A475A9C00BF8675 /* lcorolib.c in Sources */,
+				944A33691A475A9C00BF8675 /* lctype.c in Sources */,
+				944A336C1A475A9C00BF8675 /* ldebug.c in Sources */,
+				944A336E1A475A9C00BF8675 /* ldo.c in Sources */,
+				944A33701A475A9C00BF8675 /* ldump.c in Sources */,
 				944A33711A475A9C00BF8675 /* lfunc.c in Sources */,
-				944A339D1A475AA800BF8675 /* VirtualMachine.swift in Sources */,
+				944A33731A475A9C00BF8675 /* lgc.c in Sources */,
+				944A33751A475A9C00BF8675 /* linit.c in Sources */,
+				944A33761A475A9C00BF8675 /* liolib.c in Sources */,
+				944A33771A475A9C00BF8675 /* llex.c in Sources */,
+				944A337A1A475A9C00BF8675 /* lmathlib.c in Sources */,
+				944A337B1A475A9C00BF8675 /* lmem.c in Sources */,
 				944A337E1A475A9C00BF8675 /* lobject.c in Sources */,
+				944A33801A475A9C00BF8675 /* lopcodes.c in Sources */,
+				944A33821A475A9C00BF8675 /* loslib.c in Sources */,
+				944A33831A475A9C00BF8675 /* lparser.c in Sources */,
+				944A33941A475A9C00BF8675 /* lundump.c in Sources */,
+				944A33861A475A9C00BF8675 /* lstate.c in Sources */,
+				944A338A1A475A9C00BF8675 /* lstrlib.c in Sources */,
+				944A33881A475A9C00BF8675 /* lstring.c in Sources */,
+				944A338D1A475A9C00BF8675 /* ltablib.c in Sources */,
+				944A338B1A475A9C00BF8675 /* ltable.c in Sources */,
+				944A33961A475A9C00BF8675 /* lutf8lib.c in Sources */,
+				944A338E1A475A9C00BF8675 /* ltm.c in Sources */,
+				944A33971A475A9C00BF8675 /* lvm.c in Sources */,
+				944A33991A475A9C00BF8675 /* lzio.c in Sources */,
+				944A33071A475A6400BF8675 /* LuaSource.m in Sources */,
+				944A339D1A475AA800BF8675 /* VirtualMachine.swift in Sources */,
 				94C67DED1A5871D200B18BC2 /* Boolean.swift in Sources */,
 				9453AD2A1A48DE5D00503603 /* Userdata.swift in Sources */,
 				941314AC1A5A123C00079EE5 /* ExtraTypes.swift in Sources */,
-				944A336E1A475A9C00BF8675 /* ldo.c in Sources */,
-				944A33941A475A9C00BF8675 /* lundump.c in Sources */,
-				944A33821A475A9C00BF8675 /* loslib.c in Sources */,
-				944A33961A475A9C00BF8675 /* lutf8lib.c in Sources */,
-				944A33861A475A9C00BF8675 /* lstate.c in Sources */,
 				94C68C9D1A475DAE00C54B88 /* Value.swift in Sources */,
-				944A337A1A475A9C00BF8675 /* lmathlib.c in Sources */,
-				944A338D1A475A9C00BF8675 /* ltablib.c in Sources */,
-				944A336B1A475A9C00BF8675 /* ldblib.c in Sources */,
-				944A33881A475A9C00BF8675 /* lstring.c in Sources */,
 				94C67DE71A58719900B18BC2 /* Number.swift in Sources */,
-				944A338E1A475A9C00BF8675 /* ltm.c in Sources */,
 				94C67DE91A5871A800B18BC2 /* String.swift in Sources */,
-				944A33751A475A9C00BF8675 /* linit.c in Sources */,
 				94C67DEF1A5871F600B18BC2 /* Table.swift in Sources */,
-				944A338B1A475A9C00BF8675 /* ltable.c in Sources */,
-				944A33761A475A9C00BF8675 /* liolib.c in Sources */,
-				944A33681A475A9C00BF8675 /* lcorolib.c in Sources */,
-				944A33071A475A6400BF8675 /* LuaSource.m in Sources */,
-				944A33691A475A9C00BF8675 /* lctype.c in Sources */,
-				944A338A1A475A9C00BF8675 /* lstrlib.c in Sources */,
-				944A33731A475A9C00BF8675 /* lgc.c in Sources */,
-				944A33641A475A9C00BF8675 /* lbaselib.c in Sources */,
-				944A33701A475A9C00BF8675 /* ldump.c in Sources */,
-				944A33771A475A9C00BF8675 /* llex.c in Sources */,
-				944A33601A475A9C00BF8675 /* lapi.c in Sources */,
-				944A336C1A475A9C00BF8675 /* ldebug.c in Sources */,
-				944A33801A475A9C00BF8675 /* lopcodes.c in Sources */,
-				944A33661A475A9C00BF8675 /* lcode.c in Sources */,
-				944A33831A475A9C00BF8675 /* lparser.c in Sources */,
-				944A33651A475A9C00BF8675 /* lbitlib.c in Sources */,
 				94C68CA01A475E2E00C54B88 /* Nil.swift in Sources */,
-				944A337D1A475A9C00BF8675 /* loadlib.c in Sources */,
-				944A33991A475A9C00BF8675 /* lzio.c in Sources */,
 				94C67DEB1A5871B700B18BC2 /* Function.swift in Sources */,
 				94C67DF11A58720900B18BC2 /* Thread.swift in Sources */,
-				944A33621A475A9C00BF8675 /* lauxlib.c in Sources */,
-				944A337B1A475A9C00BF8675 /* lmem.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +798,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -794,7 +811,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Lua/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.motileware.Lua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -813,6 +830,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -825,7 +843,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Lua/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.motileware.Lua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -860,7 +878,7 @@
 				);
 				INFOPLIST_FILE = LuaSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.motileware.LuaSource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -892,7 +910,7 @@
 				);
 				INFOPLIST_FILE = LuaSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.motileware.LuaSource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -928,6 +946,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -951,7 +970,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -981,6 +999,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -998,7 +1017,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -1017,6 +1035,8 @@
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Lua;
 				SWIFT_OBJC_BRIDGING_HEADER = LuaSource/LuaSource.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1035,6 +1055,8 @@
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Lua;
 				SWIFT_OBJC_BRIDGING_HEADER = LuaSource/LuaSource.h;
 				SWIFT_VERSION = 5.0;
@@ -1044,6 +1066,7 @@
 		94697A971AC712CB0047447A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -1065,6 +1088,7 @@
 		94697A981AC712CB0047447A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (

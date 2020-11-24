@@ -164,7 +164,7 @@ open class VirtualMachine {
     }
     
     open func createUserdata<T: CustomTypeInstance>(_ o: T) -> Userdata {
-        let userdata = lua_newuserdata(vm, MemoryLayout<T>.size) // this both pushes ptr onto stack and returns it
+        let userdata = lua_newuserdatauv(vm, MemoryLayout<T>.size, 1) // this both pushes ptr onto stack and returns it
 
         let ptr = userdata!.bindMemory(to: T.self, capacity: 1)
         ptr.initialize(to: o) // creates a new legit reference to o
@@ -259,7 +259,7 @@ open class VirtualMachine {
     }
     
     fileprivate func argError(_ expectedType: String, at argPosition: Int) {
-        luaL_typerror(vm, Int32(argPosition), (expectedType as NSString).utf8String)
+        luaL_argerror(vm, Int32(argPosition), (expectedType as NSString).utf8String)
     }
     
     open func createCustomType<T>(_ setup: (CustomType<T>) -> Void) -> CustomType<T> {
